@@ -303,6 +303,10 @@
             background-position: bottom right;
         }
         
+        .tabcontent .slick-track {
+            width: auto !important;
+        }
+
         #overlay {
             position: fixed;
             opacity: 0;
@@ -495,7 +499,8 @@
             height: 0%;
             /* undo display:none          */
             /* height:0 is also invisible */
-            overflow: hidden;
+            /* overflow: hidden; */
+            display: none;
             /* no-overflow                */
         }
         
@@ -588,6 +593,9 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            position: absolute;
+            bottom: -70px;
+            left: 160px;
         }
         
         .feedback__message {
