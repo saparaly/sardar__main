@@ -1,0 +1,270 @@
+.banner__section {
+    background-image: url('img/banner.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 40.6%, rgba(0, 0, 0, 0.62) 100%), url(1_1_View07.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner__container {
+    display: flex;
+    flex-direction: column;
+    padding: 300px 0 45px 0;
+}
+
+.banner__discounts {
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.banner__header {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    color: #FFFFFF;
+    max-width: 800px;
+    margin-bottom: 73px;
+}
+
+.banner__feedback--block {
+    margin-bottom: 130px;
+}
+
+.banner__feedback--block,
+.banner__feedback--btns {
+    display: flex;
+    align-items: center;
+}
+
+.banner__dom--location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.first__location p {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    color: #FFFFFF;
+}
+
+.first__location p span {
+    font-size: 100px;
+}
+
+.first__location p:last-child {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.banner__popup--btn {
+    background: #FF7400;
+    width: 376px;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    clip-path: polygon(11% 0%, 100% 0%, 89% 100%, 0% 100%);
+    transition: all 0.2s linear;
+    border: none;
+}
+
+.banner__choice--btn {
+    background-image: url('img/planing-bg.png');
+    background-repeat: no-repeat;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 309px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s linear;
+}
+
+.banner__choice--btn:hover {
+    background: #FFFFFF;
+    color: #FF7400;
+}
+
+.banner__popup--btn:hover {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.banner__bottom--block {
+    display: flex;
+    gap: 73px;
+    justify-content: flex-end;
+    max-width: 1600px;
+    position: relative;
+}
+
+.bottom--block--item {
+    display: flex;
+    gap: 15px;
+}
+
+.bottom--block--item p {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    width: 285px;
+    color: #FFFFFF;
+}
+
+
+/*modal*/
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 98;
+    width: 385px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: auto;
+    margin-bottom: 11px;
+}
+
+.modal-header--title {
+    text-align: center;
+}
+
+.modal-header--title p:first-child {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #4D5460;
+}
+
+.modal-header--title p:last-child {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    background: linear-gradient(180deg, #353643 0%, #3A4C5F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.modal-body {
+    background-image: url('img/popup-img.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    z-index: 97;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form .input__text {
+    font-size: 12px;
+    color: #DDDDDD;
+    margin-bottom: 5px;
+    margin-right: auto;
+    margin-left: 69px;
+}
+
+input[type=text] {
+    width: 287px;
+    padding: 8px 20px;
+    display: inline-block;
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    font-weight: 300;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #9B9B9B;
+    margin-bottom: 20px;
+}
+
+.check__box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form .check__box p {
+    font-weight: 300;
+    font-size: 12px;
+    color: #000000;
+    margin: 0;
+}
+
+.modal__sent-btn {
+    font-size: 18px;
+    color: #FFFFFF;
+    width: 287px;
+    padding: 7px 70px;
+    background: #FF7400;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.social__media {
+    font-weight: 300;
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.social__media--icon {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+.social__media--icon svg:hover path {
+    fill: #FF7400;
+}
