@@ -97,10 +97,11 @@
         /**/
         
         .banner__section {
-            background-image: url('img/banner.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 40.6%, rgba(0, 0, 0, 0.62) 100%), url(1_1_View07.jpg);
+            background-image: url('img/banner.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 40.6%, rgba(0, 0, 0, 0.62) 100%);
             background-repeat: no-repeat;
             background-size: cover;
             height: auto;
+            overflow-x: hidden;
         }
         
         .banner__container {
@@ -639,10 +640,6 @@
         }
         /*banner*/
         
-        .banner__section {
-            background-image: url('img/banner.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 40.6%, rgba(0, 0, 0, 0.62) 100%);
-            background-repeat: no-repeat;
-        }
         /**/
         
         .icon {
