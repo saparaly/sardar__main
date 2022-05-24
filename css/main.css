@@ -28,6 +28,96 @@ body {
     overflow-x: hidden;
 }
 
+.slick-list {
+    overflow: visible;
+}
+
+.map__section .paga__navigation--section {
+    margin-bottom: 0;
+    position: absolute;
+}
+
+.contacts{
+    margin-top: 106px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map__section{
+    width: 50%;
+}
+.contacts__section {
+    font-family: 'Bebas Neue';
+    width: 50%;
+    background: #31353D;
+    padding: 77px 160px 197px 50px;
+}
+.contacts__section h3 {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 84px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.contacts__flex{
+    gap: 20px   ;
+    display: flex;
+    align-items: center;
+}
+.contacts .map__section iframe {
+    height: none !important;
+}
+.contacts__section span.contact_operator{
+    font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.contacts p {
+    font-family: 'Noto Sans';
+    font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+color: #DDDDDD;
+}
+.contacts input:not([type="checkbox"]) {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    max-width: 287px;
+    width: 100%;
+    padding: 7px 20px;
+    background: #31353D;
+}
+.contacts label, .modal__news {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+}
+.contacts__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.contacts__section span {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.5);
+}
+.contact__items {
+    display: flex;
+}
 .container {
     margin: 0 auto;
     padding: 0 10px;
