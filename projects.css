@@ -265,6 +265,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: all 0.15s linear;
+}
+
+.our__projects--block a:hover svg path,
+.our__projects--block a:hover {
+    color: #3A4C5F;
+    fill: #3A4C5F;
 }
 
 .our__projects--block-img {
@@ -394,6 +401,13 @@
     width: 212px;
     padding: 12px;
     background: #FF7400;
+    transition: all 0.15s linear;
+    border: 1px solid #FF7400;
+}
+
+.project__card--item--link:hover {
+    background: none;
+    color: #FF7400;
 }
 
 .project__card__container {
@@ -457,6 +471,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    transition: all 0.15s linear;
 }
 
 .pagination li.active {
@@ -472,11 +487,16 @@
 .pagination li a {
     font-weight: 400;
     font-size: 24px;
-    background: linear-gradient(180deg, #353643 0%, #3A4C5F 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: #353643;
+    transition: all 0.15s linear;
+}
+
+.pagination li:hover a,
+.pagination li:hover {
+    background: #FF7400;
+    border: 1px solid #FF7400;
+    font-weight: 700;
+    color: #FFFFFF;
 }
 
 .next__page--btn {
@@ -486,12 +506,19 @@
     transform: translateX(-111px);
 }
 
+.prev__page-btn:hover svg path,
+.prev__page-btn:hover {
+    fill: #FF7400;
+    border: 1px solid #FF7400;
+}
+
 .prev__page-btn {
     border: 1px solid #353643;
     width: 280px;
     padding: 22px 19px;
     transform: translateX(222px);
     z-index: -1;
+    transition: all 0.15s linear;
 }
 
 .next-btn {
@@ -505,6 +532,130 @@
     text-transform: uppercase;
     color: #FFFFFF;
     clip-path: polygon( 0% 100%, 15% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+    transition: all 0.15s linear;
+}
+
+.next-btn:hover {
+    background: #3A4C5F;
+    border: 1px solid #3A4C5F;
+}
+
+
+/*tabs*/
+
+.onsales__tabs .tab-head {
+    list-style: none;
+    display: flex;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+    width: 667px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.onsales__tabs .tablink {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+    padding: 20px 63px;
+    border-bottom: 3px solid #FFFFFF;
+    cursor: pointer;
+    width: 333px;
+    text-align: center;
+}
+
+.onsales__tabs .tablink.tab-active {
+    color: #FF7400;
+    border-bottom: 3px solid #FF7400;
+}
+
+.onsales__tabs .tabcontent {
+    display: none;
+}
+
+.onsales__tabs .tabcontent.active {
+    display: block;
+}
+
+
+/**/
+
+.paga__navigation--section-sale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    width: 130px;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.paga__navigation--section-sale a {
+    color: #FF7400;
+}
+
+.paga__navigation--section-sale p {
+    color: #353643;
+}
+
+
+/**/
+
+.news__and__filters__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.news__filter {
+    width: 248px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.news__filter--header {
+    font-size: 24px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.news__filter--title--1 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+}
+
+.news__card--in-filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+    row-gap: 24px;
+}
+
+.filter__cards {
+    max-width: 1195px;
+}
+
+.onsales__tabs .box--shadow {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    width: 32% !important;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.news__filter--inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 @media(max-width: 1650px) {
@@ -521,12 +672,16 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        gap: 25px;
     }
     .project__card--item-img {
         padding: 15px 0 3px 15px;
     }
     .project__card--item-info {
         padding-left: 56%;
+    }
+    .filter__cards {
+        max-width: 1045px;
     }
 }
 
@@ -538,10 +693,13 @@
     }
     .project__card--item-img {
         width: 100%;
-        position: static;
+        position: relative;
         height: 100%;
         padding: 15px;
         height: 385px;
+    }
+    .project__card--views {
+        right: 40px;
     }
     .project__card--item-info {
         padding-left: 15px;
@@ -553,23 +711,59 @@
     .project__card--item-icon {
         margin-bottom: 30px;
     }
+    .filter__cards {
+        max-width: 1000px;
+    }
 }
 
-@media(max-width: 1360px) {}
+@media(max-width: 1360px) {
+    .onsales__tabs .tablink {
+        font-size: 28px;
+        padding: 16px 18px;
+        width: 300px;
+    }
+    .onsales__tabs .tab-head {
+        width: 600px;
+    }
+    .filter__cards {
+        max-width: 880px;
+    }
+    .onsales__tabs .box--shadow {
+        width: 48% !important;
+    }
+    .news__card--in-filters {
+        gap: 4%;
+        row-gap: 30px;
+    }
+}
 
 @media(max-width: 1260px) {
     .our__projects--section {
         margin-top: 30px;
     }
     .header__phone {
-        font-size: 18px;
+        font-size: 18px !important;
     }
     .header__phone svg {
-        width: 23px;
-        height: 23px;
+        width: 23px !important;
+        height: 23px !important;
     }
     .header__nav__links {
-        gap: 15px;
+        gap: 15px !important;
+    }
+    .onsales__tabs .tab-head {
+        margin-bottom: 25px;
+    }
+    .onsales__tabs .tab-head {
+        width: 560px;
+    }
+    .onsales__tabs .tablink {
+        font-size: 25px;
+        padding: 16px 18px;
+        width: 280px;
+    }
+    .filter__cards {
+        max-width: 780px;
     }
 }
 
@@ -626,11 +820,14 @@
     }
     /**/
     .logo {
-        width: 140px;
-        height: 50px;
+        width: 140px !important;
+        height: 50px !important;
     }
     .header__phone {
-        font-size: 16px;
+        font-size: 16px !important;
+    }
+    .filter__cards {
+        max-width: 715px;
     }
 }
 
@@ -668,6 +865,20 @@
     .header__phone {
         margin-left: auto;
         margin-right: 40px;
+    }
+    .news__and__filters__section {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .news__filter {
+        width: 100%;
+    }
+    form {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .filter__cards {
+        max-width: 100%;
     }
 }
 
@@ -761,7 +972,7 @@
     }
     .project__card--item-img {
         width: 100%;
-        position: static;
+        position: relative;
         padding: 15px;
         min-height: 272px;
         height: 350px;
@@ -822,6 +1033,12 @@
     .header {
         padding: 20px 0;
     }
+    .tab-head svg {
+        display: none;
+    }
+    .onsales__tabs .tablink {
+        width: 100%;
+    }
 }
 
 @media(max-width: 692px) {
@@ -836,6 +1053,30 @@
     .footer__prava {
         flex-direction: column;
         gap: 30px;
+    }
+    .onsales__tabs .tab-head {
+        flex-direction: column;
+        width: 100%;
+    }
+    .onsales__tabs .tab-head svg {
+        display: none;
+    }
+    .onsales__tabs .tablink.tab-active {
+        color: #FF7400;
+        border-bottom: 3px solid #FF7400;
+        width: 100%;
+    }
+    .onsales__tabs .box--shadow {
+        width: 70% !important;
+    }
+    .news__card--in-filters {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 592px) {
+    form {
+        gap: 20px;
     }
 }
 
@@ -878,6 +1119,18 @@
         padding: 0px 11px 0px 66px;
         font-size: 14px;
         display: flex;
+        align-items: center;
+    }
+    form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .news__filter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* gap: 180px; */
+        column-gap: 200px;
         align-items: center;
     }
 }
@@ -944,5 +1197,21 @@
         font-size: 14px;
         display: flex;
         align-items: center;
+    }
+    .onsales__tabs .tablink {
+        font-size: 22px;
+        padding: 15px 18px;
+    }
+    .news__filter {
+        column-gap: 115px;
+    }
+    .onsales__tabs .box--shadow {
+        width: 90% !important;
+    }
+}
+
+@media(max-width: 410px) {
+    .news__filter {
+        column-gap: 56px;
     }
 }
