@@ -412,6 +412,34 @@
     height: 30px;
 }
 
+.project__card--photo {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    font-size: 14px;
+    padding: 4px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.project__card--views {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    font-size: 14px;
+    padding: 3px 13px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
 .pagination {
     display: flex;
     list-style: none;
