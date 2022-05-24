@@ -97,10 +97,11 @@
         /**/
         
         .banner__section {
-            background-image: url('img/banner.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 40.6%, rgba(0, 0, 0, 0.62) 100%), url(1_1_View07.jpg);
+            background-image: url('img/banner.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 40.6%, rgba(0, 0, 0, 0.62) 100%);
             background-repeat: no-repeat;
             background-size: cover;
             height: auto;
+            overflow-x: hidden;
         }
         
         .banner__container {
@@ -302,6 +303,10 @@
             background-position: bottom right;
         }
         
+        .tabcontent .slick-track {
+            max-width: 100%;
+        }
+
         #overlay {
             position: fixed;
             opacity: 0;
@@ -494,7 +499,8 @@
             height: 0%;
             /* undo display:none          */
             /* height:0 is also invisible */
-            overflow: hidden;
+            /* overflow: hidden; */
+            display: none;
             /* no-overflow                */
         }
         
@@ -587,6 +593,9 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            position: absolute;
+            bottom: -70px;
+            left: 160px;
         }
         
         .feedback__message {
@@ -639,10 +648,6 @@
         }
         /*banner*/
         
-        .banner__section {
-            background-image: url('img/banner.png'), linear-gradient(180deg, rgba(0, 0, 0, 0) 40.6%, rgba(0, 0, 0, 0.62) 100%);
-            background-repeat: no-repeat;
-        }
         /**/
         
         .icon {
